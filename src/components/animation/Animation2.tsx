@@ -329,25 +329,13 @@ const Animation2 = () => {
   const pfpLeft = useSelector(selectPfp2Left);
   const pfp1Top = useSelector(selectPfpTop);
   const pfp1Left = useSelector(selectPfpLeft);
-  const [originPfpTop, setOriginPfpTop] = useState(0);
-  const [originPfpLeft, setOriginPfpLeft] = useState(0);
-  const originPfpRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (originRef.current) {
       setOriginTop(originRef.current.offsetTop);
       setOriginLeft(originRef.current.offsetLeft);
-
     }
   }, [originRef]);
-
-  useEffect(() => {
-    if (originPfpRef.current) {
-      setOriginPfpTop(originPfpRef.current.offsetTop);
-      setOriginPfpLeft(originPfpRef.current.offsetLeft);
-
-    }
-  }, [originPfpRef]);
 
   return (
     <AnimationContainer>

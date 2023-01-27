@@ -26,8 +26,8 @@ interface AnimationProps {
 interface PfpAnimationProps {
   pfpTop: number;
   pfpLeft: number;
-  originPfpTop: number;
-  originPfpLeft: number;
+  originPfpTopProp: number;
+  originPfpLeftProp: number;
 }
 
 const serverAnimation1 = keyframes`
@@ -192,8 +192,8 @@ const ProfilePicOverlay = styled.div<PfpAnimationProps>`
   left: ${(props) => `${props.pfpLeft}px`};
   animation: ${(props) =>
       moveAnimation2(
-        props.originPfpLeft,
-        props.originPfpTop,
+        props.originPfpLeftProp,
+        props.originPfpTopProp,
         props.pfpLeft,
         props.pfpTop
       )}
@@ -422,9 +422,6 @@ const Animation3 = () => {
   const pfpLeft = useSelector(selectPfp3Left);
   const pfp2Top = useSelector(selectPfp2Top);
   const pfp2Left = useSelector(selectPfp2Left);
-  const [originPfpTop, setOriginPfpTop] = useState(0);
-  const [originPfpLeft, setOriginPfpLeft] = useState(0);
-  const originPfpRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (originRef.current) {
@@ -432,13 +429,6 @@ const Animation3 = () => {
       setOriginLeft(originRef.current.offsetLeft);
     }
   }, [originRef]);
-
-  useEffect(() => {
-    if (originPfpRef.current) {
-      setOriginPfpTop(originPfpRef.current.offsetTop);
-      setOriginPfpLeft(originPfpRef.current.offsetLeft);
-    }
-  }, [originPfpRef]);
 
   return (
     <AnimationContainer>
@@ -449,8 +439,8 @@ const Animation3 = () => {
               <DiscordCircle />
               <ProfilePic ref={pfpRef} />
               <ProfilePicOverlay
-                originPfpTop={pfp2Top}
-                originPfpLeft={pfp2Left}
+                originPfpTopProp={pfp2Top}
+                originPfpLeftProp={pfp2Left}
                 pfpLeft={pfpLeft}
                 pfpTop={pfpTop}
               />
