@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { projects } from "./Project";
 import { useState } from "react";
@@ -33,21 +33,6 @@ const tabs = [
     icon: resumeIcon,
   },
 ];
-
-// const projects = [
-//   {
-//     name: "Home",
-//   },
-//   {
-//     name: "About",
-//   },
-//   {
-//     name: "Projects",
-//   },
-//   {
-//     name: "Resume",
-//   },
-// ];
 
 const Container = styled.nav`
   width: 100%;
@@ -171,12 +156,12 @@ const Nav = () => {
               <Tabs
                 key={id}
                 onMouseEnter={() => {
-                  if (id == 2) {
+                  if (id === 2) {
                     setActive(true);
                   }
                 }}
                 onMouseLeave={() => {
-                  if (id == 2) {
+                  if (id === 2) {
                     setActive(false);
                   }
                 }}
