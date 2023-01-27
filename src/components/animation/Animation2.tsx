@@ -307,21 +307,17 @@ const Animation2 = () => {
 
   useEffect(() => {
     if (buttonRef.current) {
-      console.log(buttonRef);
-      console.log(buttonRef);
       dispatch(setTop(buttonRef.current.offsetTop));
       dispatch(setLeft(buttonRef.current.offsetLeft));
     }
-  }, [buttonRef]);
+  }, [buttonRef, dispatch]);
 
   useEffect(() => {
     if (pfpRef.current) {
-      console.log(pfpRef);
-      console.log(pfpRef);
       dispatch(setPfpTop(pfpRef.current.offsetTop));
       dispatch(setPfpLeft(pfpRef.current.offsetLeft));
     }
-  }, [pfpRef]);
+  }, [pfpRef, dispatch]);
 
   const top = useSelector(selectDeliveredTop);
   const left = useSelector(selectDeliveredLeft);
@@ -341,8 +337,7 @@ const Animation2 = () => {
     if (originRef.current) {
       setOriginTop(originRef.current.offsetTop);
       setOriginLeft(originRef.current.offsetLeft);
-      console.log(originTop, "ot");
-      console.log(originLeft, "ol");
+
     }
   }, [originRef]);
 
@@ -350,8 +345,7 @@ const Animation2 = () => {
     if (originPfpRef.current) {
       setOriginPfpTop(originPfpRef.current.offsetTop);
       setOriginPfpLeft(originPfpRef.current.offsetLeft);
-      console.log(originPfpTop, "ot");
-      console.log(originPfpLeft, "ol");
+
     }
   }, [originPfpRef]);
 

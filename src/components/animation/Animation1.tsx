@@ -327,8 +327,6 @@ const Animation1 = () => {
     if (originRef.current) {
       setOriginTop(originRef.current.offsetTop);
       setOriginLeft(originRef.current.offsetLeft);
-      console.log(originTop, "ot");
-      console.log(originLeft, "ol");
     }
   }, [originRef]);
 
@@ -336,8 +334,6 @@ const Animation1 = () => {
     if (originPfpRef.current) {
       setOriginPfpTop(originPfpRef.current.offsetTop);
       setOriginPfpLeft(originPfpRef.current.offsetLeft);
-      console.log(originPfpTop, "ot");
-      console.log(originPfpLeft, "ol");
     }
   }, [originPfpRef]);
 

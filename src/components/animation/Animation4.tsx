@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import Animation4NFTs, { NftType } from "./Animation4NFTs";
@@ -311,30 +311,18 @@ const Animation4 = () => {
   const pfpRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // const timer = setTimeout(() => {
-
     if (interestsRef.current) {
-      console.log(interestsRef);
-      console.log(interestsRef);
       dispatch(setInterestsTop(interestsRef.current.offsetTop));
       dispatch(setInterestsLeft(interestsRef.current.offsetLeft));
     }
-    // }, 3000);
-    // return () => clearTimeout(timer);
-  }, [interestsRef]);
+  }, [interestsRef, dispatch]);
 
   useEffect(() => {
-    // const timer = setTimeout(() => {
-
     if (pfpRef.current) {
-      console.log(pfpRef);
-      console.log(pfpRef);
       dispatch(setPfp3Top(pfpRef.current.offsetTop));
       dispatch(setPfp3Left(pfpRef.current.offsetLeft));
     }
-    // }, 3000);
-    // return () => clearTimeout(timer);
-  }, [pfpRef]);
+  }, [pfpRef, dispatch]);
 
   return (
     <AnimationContainer>

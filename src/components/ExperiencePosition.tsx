@@ -133,7 +133,7 @@ const ExperiencePosition = ({ active, position }: Props) => {
       currentChannel!.style.transition = `left ease 0.25s`;
       currentChannel!.style.left = "100%";
     }
-  }, [isChannelActive]);
+  }, [isChannelActive, currentChannel]);
 
   function handleTouchMove(e: any) {
     setTouchEnd(e.targetTouches[0].clientX);

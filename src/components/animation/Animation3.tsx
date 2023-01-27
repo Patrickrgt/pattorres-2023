@@ -399,30 +399,18 @@ const Animation3 = () => {
   const pfpRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // const timer = setTimeout(() => {
-
     if (deliveredRef.current) {
-      console.log(deliveredRef);
-      console.log(deliveredRef, "delivered");
       dispatch(setDeliveredTop(deliveredRef.current.offsetTop));
       dispatch(setDeliveredLeft(deliveredRef.current.offsetLeft));
     }
-    // }, 3000);
-    // return () => clearTimeout(timer);
-  }, [deliveredRef]);
+  }, [deliveredRef, dispatch]);
 
   useEffect(() => {
-    // const timer = setTimeout(() => {
-
     if (pfpRef.current) {
-      console.log(pfpRef);
-      console.log(pfpRef);
       dispatch(setPfp2Top(pfpRef.current.offsetTop));
       dispatch(setPfp2Left(pfpRef.current.offsetLeft));
     }
-    // }, 3000);
-    // return () => clearTimeout(timer);
-  }, [pfpRef]);
+  }, [pfpRef, dispatch]);
 
   const top = useSelector(selectInterestsTop);
   const left = useSelector(selectInterestsLeft);
@@ -442,8 +430,6 @@ const Animation3 = () => {
     if (originRef.current) {
       setOriginTop(originRef.current.offsetTop);
       setOriginLeft(originRef.current.offsetLeft);
-      console.log(originTop, "ot");
-      console.log(originLeft, "ol");
     }
   }, [originRef]);
 
@@ -451,8 +437,6 @@ const Animation3 = () => {
     if (originPfpRef.current) {
       setOriginPfpTop(originPfpRef.current.offsetTop);
       setOriginPfpLeft(originPfpRef.current.offsetLeft);
-      console.log(originPfpTop, "ot");
-      console.log(originPfpLeft, "ol");
     }
   }, [originPfpRef]);
 
