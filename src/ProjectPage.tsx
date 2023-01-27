@@ -1,5 +1,4 @@
-import { Suspense } from "react";
-import styled, { css, keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useSelector } from "react-redux";
 import Nav from "./components/Nav";
 import ProjectDetails from "./components/ProjectDetails";

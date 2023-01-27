@@ -1,8 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import styled, { css, keyframes } from "styled-components";
-import ExperienceChannel, { PositionType } from "./ExperienceChannel";
-import aikobanner from "../assets/img/aikobanner.png";
+import styled, { keyframes } from "styled-components";
 import discord from "../assets/img/discord.jpg";
 
 import {
@@ -92,12 +90,6 @@ export const experience: ExperienceType[] = [
   },
 ];
 
-const gradient = keyframes`
-    0%{background-position:10% 0%}
-    50%{background-position:91% 100%}
-    100%{background-position:10% 0%}
-`;
-
 const Container = styled.div`
   position: relative;
   height: 100vh;
@@ -116,23 +108,15 @@ const BackgroundContainer = styled.div`
   background-image: url(${discord});
 `;
 
-const BackgroundImage = styled.div`
-  z-index: 2;
-  position: relative;
-  background-color: grey;
-  top: 0;
-  left: 0;
-`;
-
 const ExperienceContainer = styled.div`
   position: relative;
   background-color: #212121;
-  filter: ${(props: Experience) =>
+  filter: ${(props: ExperienceProps) =>
     props.active
       ? "drop-shadow(0px 6px 3rem #212121)"
       : "drop-shadow(0px 6px 1rem #212121)"};
   transition: all ease-in-out 0.25s;
-  transform: ${(props: Experience) =>
+  transform: ${(props: ExperienceProps) =>
     props.active ? "translate(0, -4px);" : ""};
 `;
 
@@ -175,8 +159,8 @@ const Circle = styled.div`
   transition: all ease-in-out 0.25s;
   background-color: white;
   width: 15px;
-  height: ${(props: Experience) => (props.expand ? "30px" : "15px")};
-  border-radius: ${(props: Experience) => (props.expand ? "25%" : "50%")};
+  height: ${(props: ExperienceProps) => (props.expand ? "30px" : "15px")};
+  border-radius: ${(props: ExperienceProps) => (props.expand ? "25%" : "50%")};
   left: 0;
   display: block;
   margin-left: -28px;
@@ -187,11 +171,12 @@ const Circle = styled.div`
 
 const Server = styled.img`
   cursor: pointer;
-  background-color: ${(props: Experience) => props.color};
+  background-color: ${(props: ExperienceProps) => props.color};
   margin-left: 1rem;
   width: 75px;
   height: 75px;
-  border-radius: ${(props: Experience) => (props.active ? "25px" : "50px")};
+  border-radius: ${(props: ExperienceProps) =>
+    props.active ? "25px" : "50px"};
   transition: border-radius ease 0.3s;
   &:hover {
     border-radius: 25px;
@@ -203,7 +188,7 @@ const Server = styled.img`
   }
 `;
 
-interface Experience {
+interface ExperienceProps {
   active?: boolean;
   expand?: boolean;
   color?: string;
@@ -211,13 +196,9 @@ interface Experience {
 
 const Experience = () => {
   const [active, setActive] = useState(false);
-  const [expand, setExpand] = useState(false);
 
   const dispatch = useDispatch();
   const activeId = useSelector(selectExperienceActiveId);
-  const activeLi = useSelector(selectPositionActiveId);
-
-  const dummy = experience;
 
   return (
     <>
@@ -243,7 +224,7 @@ const Experience = () => {
                         setActive(true);
                       }}
                     >
-                      <Circle expand={activeId == experience.id} />
+                      <Circle expand={activeId === experience.id} />
                       <Server
                         color={experience.color}
                         src={experience.image}
@@ -255,7 +236,7 @@ const Experience = () => {
                             )
                           );
                         }}
-                        active={activeId == experience.id}
+                        active={activeId === experience.id}
                       ></Server>
                     </ServerBackground>
                   ))}

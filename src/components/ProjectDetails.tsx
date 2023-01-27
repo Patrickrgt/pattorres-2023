@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { Routes, Route, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 

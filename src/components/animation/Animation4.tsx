@@ -1,12 +1,8 @@
 import styled, { css, keyframes } from "styled-components";
-import { ReactNode, useEffect, useState, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useRef } from "react";
+import { useDispatch } from "react-redux";
 import Animation4NFTs, { NftType } from "./Animation4NFTs";
 import {
-  selectInterestsTop,
-  selectInterestsLeft,
-  selectPfp3Top,
-  selectPfp3Left,
   setInterestsTop,
   setInterestsLeft,
   setPfp3Top,
@@ -48,28 +44,11 @@ const nfts: NftType[] = [
   },
 ];
 
-const rotateAnimation1 = keyframes`
- 100% {
-  transform:rotate(1turn) translate(250px) rotate(-1turn);
-  }
-`;
-
 const runAnimation1 = keyframes`
    0% {opacity: 1; transition: all ease;}
    90% {opacity: 1; transition: all ease;}
    100% {opacity: 0;  border: 2px solid #a8aaab; transition: all ease;
 }
-`;
-
-const moveAnimation1 = (
-  x1: number,
-  y1: number,
-  x2: number,
-  y2: number
-) => keyframes`
-   0% {left:${x1}px; top: ${y1}px; font-weight: 400; content: "Aiko Virtual"; font-size: 6rem; color: #ffffff; font-size: 12rem; transition: all ease;}
-   80% {left:${x1}px; top: ${y1}px; font-weight: 400; content: "Aiko Virtual"; font-size: 6rem; color: #ffffff; font-size: 12rem; transition: all ease;}
-   100% {left:${x2}px; top: ${y2}px; font-weight: 400; content: "Interests in"; font-size: 6rem; color: #ffffff; font-size: 10rem; transition: all ease;}
 `;
 
 const slideAnimation1 = keyframes`
@@ -164,26 +143,10 @@ const ProfilePic = styled.div`
   align-items: center;
 `;
 
-const TextMessageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-`;
-
 const Profile = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-`;
-
-const ProfileInfoContainer = styled.div``;
-
-const ProfileSchoolContainer = styled.div``;
-
-const ProfileSchool = styled.p`
-  color: white;
-  font-size: var(--font-medium);
-  font-weight: bold;
 `;
 
 const ProfileNameContainer = styled.div`
@@ -192,15 +155,6 @@ const ProfileNameContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin-left: 50%;
-`;
-
-const ProfileName = styled.h1`
-  color: white;
-  font-size: var(--font-2xlarge);
-  font-weight: 300;
-  color: #a8aaab;
-  margin: 1rem 0;
-  text-align: center;
 `;
 
 const DeliverDynamic = styled.p`
@@ -299,31 +253,6 @@ const DiscordSub = styled.p`
 const DiscordExperience = styled.p`
   font-size: var(--font-medium);
   color: #ffffff;
-`;
-
-const BreakContainer = styled.div`
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-end;
-`;
-
-const DiscordBreak = styled.hr`
-  border: 1px solid red;
-  margin: 3rem 0;
-  width: 100%;
-`;
-
-const DiscordSpan = styled.span`
-  color: white;
-  text-transform: uppercase;
-  font-size: var(--font-medium);
-  font-weight: 800;
-  background-color: red;
-  border-radius: 12px;
-  padding: 0 1rem;
-  position: absolute;
 `;
 
 const LikedRow = styled.div`

@@ -1,16 +1,5 @@
-import styled, { css, keyframes } from "styled-components";
-import { ReactNode, useEffect, useState, useRef } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import {
-  selectInterestsTop,
-  selectInterestsLeft,
-  selectPfp3Top,
-  selectPfp3Left,
-  setInterestsTop,
-  setInterestsLeft,
-  setPfp3Top,
-  setPfp3Left,
-} from "../../state/uiSlice";
+import styled, { keyframes } from "styled-components";
+
 import github from "../../assets/img/github.svg";
 import linkedin from "../../assets/img/linkedin.svg";
 import profile from "../../assets/img/profile.jpg";
@@ -74,12 +63,6 @@ const ProfilePic = styled.img`
     width: 240px;
     height: 240px;
   }
-`;
-
-const Profile = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
 `;
 
 const NameCol = styled.div`

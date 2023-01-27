@@ -1,15 +1,11 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import styled, { css, keyframes } from "styled-components";
+import styled from "styled-components";
 import ExperienceChannel, { PositionType } from "./ExperienceChannel";
 import ExperiencePosition from "./ExperiencePosition";
 
-import { experience } from "./Experience";
-
 import {
-  setExperienceActiveId,
   selectExperienceActiveId,
-  setPositionActiveId,
   selectPositionActiveId,
 } from "../state/uiSlice";
 
@@ -97,14 +93,12 @@ interface Props {
 }
 
 const ExperienceServer = ({ experience, key }: Props) => {
-  const [active, setActive] = useState(false);
-  const dispatch = useDispatch();
   const activeId = useSelector(selectExperienceActiveId);
   const activeLi = useSelector(selectPositionActiveId);
 
   return (
     <>
-      <ExperienceCol active={activeId == experience.id}>
+      <ExperienceCol active={activeId === experience.id}>
         <ServerTitle>
           <ExperienceText>{experience.company}</ExperienceText>
         </ServerTitle>
@@ -124,7 +118,7 @@ const ExperienceServer = ({ experience, key }: Props) => {
       <PositionCol>
         {experience.description.map((position: PositionType) => (
           <ExperiencePosition
-            active={activeLi == position.li}
+            active={activeLi === position.li}
             position={position}
           />
         ))}

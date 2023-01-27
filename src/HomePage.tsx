@@ -1,10 +1,8 @@
-import { Suspense } from "react";
-import styled, { css, keyframes } from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { useSelector } from "react-redux";
 import Animation from "./components/animation/Animation";
 import Nav from "./components/Nav";
 import Experience from "./components/Experience";
-import ProjectDetails from "./components/ProjectDetails";
 import Project from "./components/Project";
 import waveImg from "./assets/img/waveImg.svg";
 
@@ -111,7 +109,7 @@ const HomePage = () => {
 
   return (
     <StyledHomePage
-      active={activeColor != "#000000"}
+      active={activeColor !== "#000000"}
       color={activeColor}
       color2={activeColor2}
       color3={activeColor3}

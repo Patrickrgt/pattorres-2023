@@ -1,9 +1,7 @@
-import styled, { css, keyframes } from "styled-components";
-import { ReactNode, useEffect, useState, useRef } from "react";
+import styled, { keyframes } from "styled-components";
+import { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  selectDeliveredTop,
-  selectDeliveredLeft,
   selectPfp2Top,
   selectPfp2Left,
   setDeliveredTop,
@@ -14,12 +12,7 @@ import {
   selectInterestsLeft,
   selectPfp3Top,
   selectPfp3Left,
-  setInterestsTop,
-  setInterestsLeft,
-  setPfp3Top,
-  setPfp3Left,
 } from "../../state/uiSlice";
-import { animation2DelayLength } from "../../app/globals";
 import aiko from "../../assets/img/aiko.jpg";
 import aikovirtual from "../../assets/img/aikovirtual.jpg";
 
@@ -219,12 +212,6 @@ const DiscordCircle = styled.div`
   animation-delay: var(--animation-2-delay-length);
 `;
 
-const TextMessageContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-`;
-
 const Profile = styled.div`
   display: flex;
   flex-direction: column;
@@ -235,69 +222,12 @@ const ProfileInfoContainer = styled.div`
   display: flex;
 `;
 
-const ProfileSchoolContainer = styled.div``;
-
-const ProfileSchool = styled.p`
-  color: white;
-  font-size: var(--font-medium);
-  font-weight: bold;
-`;
-
-const ProfileSchoolInner = styled.div``;
-
-const ProfileSchoolImg = styled.img`
-  width: 50px;
-  height: 50px;
-  margin-right: 2rem;
-`;
-
 const ProfileNameContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex: 1 1 100%;
-`;
-
-const ProfileName = styled.h1`
-  color: white;
-  font-size: var(--font-2xlarge);
-  font-weight: 300;
-  color: #a8aaab;
-  margin: 1rem 0;
-  text-align: center;
-  flex: 1;
-`;
-
-const TextIcon = styled.div`
-  background-color: #ffffff;
-  width: 120px;
-  height: 120px;
-  border-radius: 100%;
-  border: 10px solid #000000;
-`;
-
-const ProfileDescription = styled.p`
-  color: white;
-  font-size: var(--font-medium);
-`;
-
-const ProfileLocation = styled.p`
-  color: white;
-  font-size: var(--font-large);
-  color: #a8aaab;
-  margin-bottom: 4rem;
-`;
-
-const ConnectButton = styled.button`
-  background-color: #70b5f9;
-  color: white;
-  font-size: var(--font-xlarge);
-  font-weight: 400;
-  border-radius: 96px;
-  width: fit-content;
-  padding: 1rem 2rem;
-  height: fit-content;
 `;
 
 const DeliverContainer = styled.div`
@@ -312,8 +242,6 @@ const DeliverText = styled.p`
   font-size: var(--font-large);
   color: #7e7e7e;
 `;
-
-const DynamicContainer = styled.div``;
 
 const DeliverDynamic = styled.div`
   font-size: var(--font-large);
@@ -333,17 +261,6 @@ const DeliverOverlay = styled.div`
     animation: ${deliveredAnimation1} 3s cubic-bezier(0.51, -0.24, 0.37, 1.58) 1;
     animation-delay: calc(1.5s + var(--animation-2-delay-length));
   }
-`;
-
-const DeliverDynamicOverlay = styled.p`
-  /* :before  {
-
-  font-size: 6rem;
-  color: #7e7e7e;
-  margin-bottom: 3rem;
-position: absolute;
-content: "Interests in";
-    } */
 `;
 
 const AikoContainer = styled.div`
@@ -432,11 +349,6 @@ const DiscordUser = styled.p`
 const DiscordSub = styled.p`
   font-size: var(--font-medium);
   color: #7e7e7e;
-`;
-
-const DiscordExperience = styled.p`
-  font-size: var(--font-medium);
-  color: #ffffff;
 `;
 
 const DiscordExperienceOverlay = styled.p`

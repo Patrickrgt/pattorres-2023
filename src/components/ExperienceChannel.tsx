@@ -1,6 +1,5 @@
-import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import styled, { css, keyframes } from "styled-components";
+import styled from "styled-components";
 import hashtag from "../assets/img/hashtag.svg";
 
 import {
@@ -27,12 +26,6 @@ const ExperienceCol = styled.div`
   flex-direction: column;
   max-width: 280px;
   min-width: 280px;
-`;
-
-const ExperienceText = styled.div`
-  color: #ffffff;
-  font-size: 2.25rem;
-  font-weight: 800;
 `;
 
 const HashTagImg = styled.img`
@@ -83,30 +76,6 @@ const PositionChannel = styled.div`
   cursor: pointer;
 `;
 
-const PositionOuterCol = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const PositionCol = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const PositionRow = styled.div`
-  display: flex;
-`;
-
-const PositionPfp = styled.div``;
-
-const PositionTitle = styled.div`
-  font-size: 1.75rem;
-`;
-
-const PositionDates = styled.div``;
-
-const PositionDesc = styled.div``;
-
 interface ChannelProps {
   active: boolean;
 }
@@ -128,11 +97,11 @@ const ExperienceChannel = ({ active, position }: Props) => {
             dispatch(await setChannelActive(true));
             dispatch(await setPositionActiveId(position.li));
           }}
-          active={activeLi == position.li}
+          active={activeLi === position.li}
         >
           <PositionChannel>
             <HashTagImg src={hashtag} />
-            <PositionTab active={activeLi == position.li}>
+            <PositionTab active={activeLi === position.li}>
               {position.title}
             </PositionTab>
             <ExperiencePosition></ExperiencePosition>

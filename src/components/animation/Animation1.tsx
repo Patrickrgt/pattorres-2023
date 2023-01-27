@@ -1,15 +1,11 @@
-import styled, { css, keyframes } from "styled-components";
-import { useDispatch, useSelector } from "react-redux";
-import { ReactNode, useEffect, useState, useRef } from "react";
+import styled, { keyframes } from "styled-components";
+import { useSelector } from "react-redux";
+import { useEffect, useState, useRef } from "react";
 import {
   selectTop,
   selectLeft,
   selectPfpTop,
   selectPfpLeft,
-  setTop,
-  setLeft,
-  setPfpTop,
-  setPfpLeft,
 } from "../../state/uiSlice";
 import doodle from "../../assets/img/doodle.jpg";
 import linkedin from "../../assets/img/linkedin-bg.jpg";

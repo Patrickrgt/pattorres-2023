@@ -1,6 +1,6 @@
-import styled, { css, keyframes } from "styled-components";
-import { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import styled, { keyframes } from "styled-components";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import reactIcon from "../assets/img/react.svg";
 import angularIcon from "../assets/img/angular.svg";
@@ -266,9 +266,7 @@ const ProjectImgContainer = styled.div`
     }
   }
 `;
-const ProjectImgAlpha = styled.img`
-  position: absolute;
-`;
+
 const ProjectImg = styled.img`
   position: absolute;
   top: 0;

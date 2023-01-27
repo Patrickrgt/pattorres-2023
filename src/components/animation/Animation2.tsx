@@ -1,9 +1,7 @@
-import styled, { css, keyframes } from "styled-components";
-import { ReactNode, useEffect, useState, useRef } from "react";
+import styled, { keyframes } from "styled-components";
+import { useEffect, useState, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  selectTop,
-  selectLeft,
   selectPfpTop,
   selectPfpLeft,
   setTop,
@@ -14,10 +12,6 @@ import {
   selectDeliveredLeft,
   selectPfp2Top,
   selectPfp2Left,
-  setDeliveredTop,
-  setDeliveredLeft,
-  setPfp2Top,
-  setPfp2Left,
 } from "../../state/uiSlice";
 import profile from "../../assets/img/profile.jpg";
 

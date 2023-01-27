@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
-import styled, { css, keyframes } from "styled-components";
-import hashtag from "../assets/img/hashtag.svg";
+import styled from "styled-components";
 
 import { setChannelActive, selectChannelActive } from "../state/uiSlice";
 

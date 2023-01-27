@@ -1,5 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
-import { ReactNode, useEffect, useState, useRef } from "react";
+import styled, { keyframes } from "styled-components";
 
 export interface NftType {
   image?: string;
