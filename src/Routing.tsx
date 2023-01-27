@@ -10,6 +10,8 @@ const Routing = () => {
         <Route path="/" element={<App />}>
           <Route index element={<HomePage />} />
           <Route path="project/:project" element={<ProjectPage />} />
+          <Route path="about" element={<HomePage />} />
+          <Route path="resume" element={<HomePage />} />
         </Route>
       </Routes>
     </BrowserRouter>

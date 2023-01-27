@@ -26,6 +26,7 @@ const links = [
 
 const runAnimation = keyframes`
    0% {opacity: 0; transition: all ease;}
+   10% {opacity: 1; transition: all ease;}
    100% {opacity: 1; transition: all ease;}
 `;
 
@@ -42,7 +43,8 @@ const AnimationContainer = styled.div`
   overflow: hidden;
   opacity: 0;
   animation: ${runAnimation} var(--animation-length) ease-in-out forwards;
-  animation-delay: var(--animation-3-delay-length);
+  animation-delay: var(--animation-4-delay-length);
+  z-index: 2;
   @media (max-width: 768px) {
     animation-delay: 0s;
     flex-direction: column;
@@ -138,7 +140,9 @@ const Animation5 = () => {
           </Description>
           <LinksRow>
             {links.map((link) => (
-              <Link src={link.img} />
+              <a href={link.link}>
+                <Link src={link.img} />
+              </a>
             ))}
           </LinksRow>
         </NameCol>

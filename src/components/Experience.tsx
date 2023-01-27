@@ -204,7 +204,7 @@ const Server = styled.img`
 `;
 
 interface Experience {
-  active: boolean;
+  active?: boolean;
   expand?: boolean;
   color?: string;
 }
@@ -243,15 +243,7 @@ const Experience = () => {
                         setActive(true);
                       }}
                     >
-                      <Circle
-                        onMouseEnter={() => {
-                          setExpand(true);
-                        }}
-                        onMouseLeave={() => {
-                          setExpand(false);
-                        }}
-                        active={activeId == experience.id}
-                      />
+                      <Circle expand={activeId == experience.id} />
                       <Server
                         color={experience.color}
                         src={experience.image}

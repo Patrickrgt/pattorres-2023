@@ -53,7 +53,7 @@ const Container = styled.nav`
   width: 100%;
   position: fixed;
   margin: 2rem 0 0 4rem;
-  z-index: 2;
+  z-index: 3;
   @media (max-width: 768px) {
     margin: 0;
     display: flex;

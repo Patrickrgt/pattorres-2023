@@ -12,6 +12,7 @@ const GlobalStyle = createGlobalStyle`
         --animation-1-delay-length: 6.5s;
         --animation-2-delay-length: 13s;
         --animation-3-delay-length: 19.5s; 
+        --animation-4-delay-length: 26s; 
         --font-xsmall: 1.75rem;
         --font-small: 2.25rem;
         --font-medium: 3.5rem;
