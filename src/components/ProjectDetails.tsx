@@ -1,6 +1,6 @@
-import styled, { keyframes } from "styled-components";
-import { Routes, Route, useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
+import styledfrom "styled-components";
+import {  useParams } from "react-router-dom";
+import {  useState } from "react";
 
 import aikoImg from "../assets/img/aiko.png";
 import aikoImg2 from "../assets/img/aiko2.png";
@@ -378,17 +378,6 @@ const RoleText = styled.p`
   }
 `;
 
-const Team = styled.div`
-  font-size: 2.75rem;
-  color: #ffffff;
-  margin: 0 2rem;
-`;
-
-const Skills = styled.div`
-  font-size: 2.75rem;
-  color: #ffffff;
-`;
-
 const VideoBackground = styled.div<ColorProps>`
   position: relative;
   padding: 4rem;
@@ -627,7 +616,7 @@ const ProjectDetails = () => {
                     <Parts>
                       {projectObj.tabs.map((tab: string, id: number) => (
                         <PartsTab
-                          active={activeTab == id}
+                          active={activeTab === id}
                           onClick={() => {
                             setTab(id);
                             console.log(activeTab);
@@ -638,21 +627,21 @@ const ProjectDetails = () => {
                         </PartsTab>
                       ))}
                     </Parts>
-                    {activeTab === 0 && (
+                    {activeTab ==== 0 && (
                       <RoleDescription color={projectObj.color}>
                         {projectObj.role.map((roleString: string) => (
                           <RoleText>{roleString}</RoleText>
                         ))}
                       </RoleDescription>
                     )}
-                    {activeTab === 1 && (
+                    {activeTab ==== 1 && (
                       <RoleDescription color={projectObj.color}>
                         {projectObj.team.map((roleString: string) => (
                           <RoleText>{roleString}</RoleText>
                         ))}
                       </RoleDescription>
                     )}
-                    {activeTab === 2 && (
+                    {activeTab ==== 2 && (
                       <RoleDescription color={projectObj.color}>
                         {projectObj.skills.map((roleString: string) => (
                           <RoleText>{roleString}</RoleText>
