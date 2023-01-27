@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import discord from "../assets/img/discord.jpg";
 
 import {
   setExperienceActiveId,
   selectExperienceActiveId,
   setPositionActiveId,
-  selectPositionActiveId,
 } from "../state/uiSlice";
 
 import ExperienceServer, { ExperienceType } from "./ExperienceServer";

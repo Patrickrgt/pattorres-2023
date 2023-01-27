@@ -1,6 +1,6 @@
-import styledfrom "styled-components";
-import {  useParams } from "react-router-dom";
-import {  useState } from "react";
+import styled from "styled-components";
+import { useParams } from "react-router-dom";
+import { useState } from "react";
 
 import aikoImg from "../assets/img/aiko.png";
 import aikoImg2 from "../assets/img/aiko2.png";
@@ -627,21 +627,21 @@ const ProjectDetails = () => {
                         </PartsTab>
                       ))}
                     </Parts>
-                    {activeTab ==== 0 && (
+                    {activeTab === 0 && (
                       <RoleDescription color={projectObj.color}>
                         {projectObj.role.map((roleString: string) => (
                           <RoleText>{roleString}</RoleText>
                         ))}
                       </RoleDescription>
                     )}
-                    {activeTab ==== 1 && (
+                    {activeTab === 1 && (
                       <RoleDescription color={projectObj.color}>
                         {projectObj.team.map((roleString: string) => (
                           <RoleText>{roleString}</RoleText>
                         ))}
                       </RoleDescription>
                     )}
-                    {activeTab ==== 2 && (
+                    {activeTab === 2 && (
                       <RoleDescription color={projectObj.color}>
                         {projectObj.skills.map((roleString: string) => (
                           <RoleText>{roleString}</RoleText>

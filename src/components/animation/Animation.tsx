@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled from "styled-components";
 import Animation1 from "./Animation1";
 import Animation2 from "./Animation2";
 import Animation3 from "./Animation3";
