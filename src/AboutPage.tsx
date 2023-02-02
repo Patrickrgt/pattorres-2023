@@ -1,9 +1,7 @@
 import styled, { keyframes } from "styled-components";
 import { useSelector } from "react-redux";
-import Animation from "./components/animation/Animation";
 import Nav from "./components/Nav";
-import Experience from "./components/Experience";
-import Project from "./components/Project";
+import About from "./components/About";
 import waveImg from "./assets/img/waveImg.svg";
 
 import {
@@ -42,8 +40,7 @@ const swell = keyframes`
   }
 `;
 
-const StyledHomePage = styled.div`
-  position: relative;
+const StyledProjectPage = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -51,21 +48,21 @@ const StyledHomePage = styled.div`
   flex: 1;
   overflow: hidden;
   transition: all ease-in-out 1s;
-  background-image: linear-gradient(-45deg, #000000, #191818, #2a2727);
+  position: relative;
   background-size: 200% 200%;
   animation: ${gradient} 10s ease infinite;
   &:before {
-    position: absolute;
     content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    transition: opacity 0.25s ease-out;
     background-image: ${(props: ColorProps) =>
       `linear-gradient(-45deg, ${props.color}, ${props.color2}, ${props.color3});`};
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: ${(props: ColorProps) => (props.active ? "1" : "0.1")};
     z-index: 0;
-    transition: opacity 0.3s ease-in-out;
-    opacity: ${(props: ColorProps) => (props.active ? `1` : "0")};
   }
 `;
 
@@ -101,14 +98,14 @@ interface ColorProps {
   active: boolean;
 }
 
-const HomePage = () => {
+function AboutPage() {
   const activeColor = useSelector(selectGlobalColor);
   const activeColor2 = useSelector(selectGlobalColor2);
   const activeColor3 = useSelector(selectGlobalColor3);
 
   return (
-    <StyledHomePage
-      active={activeColor !== "#000000"}
+    <StyledProjectPage
+      active={!!activeColor}
       color={activeColor}
       color2={activeColor2}
       color3={activeColor3}
@@ -116,11 +113,9 @@ const HomePage = () => {
       <Wave />
       <Wave2 />
       <Nav />
-      <Animation />
-      <Experience />
-      <Project />
-    </StyledHomePage>
+      <About />
+    </StyledProjectPage>
   );
-};
+}
 
-export default HomePage;
+export default AboutPage;
