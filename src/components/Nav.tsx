@@ -55,6 +55,7 @@ const NavContainer = styled.nav`
   @media (max-width: 768px) {
     padding: 0;
     display: flex;
+    border: none;
     justify-content: space-evenly;
     width: 100%;
   }
@@ -65,10 +66,11 @@ const TabContainer = styled.ul`
   @media (max-width: 768px) {
     display: flex;
     justify-content: space-evenly;
-    width: 100%;
-    background: linear-gradient(to bottom, #313131, #131313);
-    border-bottom: 1px groove #161616;
-    padding: 1rem 0;
+    width: 95%;
+    border-radius: 25px;
+    background-color: rgba(23, 21, 21, 0.613);
+    padding: 2rem 0;
+    margin-bottom: 12px;
   }
 `;
 
@@ -76,6 +78,7 @@ const TabsIcon = styled.img`
   width: 32px;
   height: 32px;
   margin: auto;
+  filter: drop-shadow(0 0 0.15rem black);
   @media (min-width: 768px) {
     display: none;
   }
@@ -92,15 +95,51 @@ const TabsText = styled.p`
 const Tabs = styled.li`
   display: inline-block;
   background-color: #222222;
-  padding: 0.5rem 1.25rem;
+  padding: 1rem 1rem;
   cursor: pointer;
-  &:hover {
-    background-color: #424242;
-    border-radius: 5px;
+  @media (min-width: 768px) {
+    &:hover {
+      background-color: #424242;
+      border-radius: 5px;
+    }
   }
   @media (max-width: 768px) {
-    background: linear-gradient(#414141, #222222);
+    background: linear-gradient(to bottom, #77797b, #0f1012, #282b2f);
+    box-shadow: 0 0.5px 0 0.5px rgba(14, 12, 12, 0.5);
+    border-top: 1px solid rgba(237, 232, 232, 0.5);
     border-radius: 15%;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+
+    &:after {
+      content: "";
+      mix-blend-mode: color-dodge;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      display: none;
+      width: 75px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      background-color: #ffffff;
+      top: 10%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.1;
+    }
+  }
+`;
+
+const LinkContainer = styled.div`
+  display: inline;
+  @media (max-width: 768px) {
+    display: static;
+    overflow: hidden;
   }
 `;
 
@@ -120,12 +159,24 @@ const ProjectListContainer = styled.div<NavProps>`
   position: absolute;
   width: fit-content;
   height: fit-content;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   @media (max-width: 768px) {
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin-top: -100%;
+    top: 0;
+  }
+`;
+
+const ProjectListContainerMobile = styled.div`
+  visibility: ${(props: NavProps) => (props.active ? "visible" : "hidden")};
+  background-color: #212121;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: translate(-10%, -54%);
+  width: fit-content;
+  height: fit-content;
+  z-index: 3;
+  @media (min-width: 768px) {
+    visibility: hidden;
   }
 `;
 
@@ -135,9 +186,11 @@ const ProjectList = styled.div`
   padding: 0.5rem 3rem;
   color: white;
   position: relative;
-  &:hover {
-    background-color: #424242;
-    border-radius: 5px;
+  @media (min-width: 768px) {
+    &:hover {
+      background-color: #424242;
+      border-radius: 5px;
+    }
   }
 `;
 
@@ -152,49 +205,63 @@ const Nav = () => {
       <NavContainer>
         <TabContainer>
           {tabs.map((tab, id) => (
-            <Link to={`/${tab.link}`}>
-              <Tabs
-                key={id}
-                onMouseEnter={() => {
-                  if (id === 2) {
-                    setActive(true);
-                  }
-                }}
-                onMouseLeave={() => {
-                  if (id === 2) {
-                    setActive(false);
-                  }
-                }}
-              >
-                <TabsText>
-                  {tab.name}{" "}
-                  {tab.project && (
-                    <>
-                      <DropDown />
-                      <ProjectListContainer active={active}>
-                        {projects.map((project) => (
-                          <Link to={`/project/${project.link}`}>
-                            <ProjectList>{project.title}</ProjectList>
-                          </Link>
-                        ))}
-                      </ProjectListContainer>
-                    </>
-                  )}
-                </TabsText>
-                {tab.project && (
-                  <>
-                    <ProjectListContainer active={active}>
-                      {projects.map((project) => (
-                        <Link to={`/project/${project.link}`}>
-                          <ProjectList>{project.title}</ProjectList>
-                        </Link>
-                      ))}
-                    </ProjectListContainer>
-                  </>
-                )}
-                <TabsIcon src={tab.icon} />
-              </Tabs>
-            </Link>
+            <>
+              {tab.project && (
+                <ProjectListContainerMobile active={active}>
+                  {projects.map((project) => (
+                    <Link
+                      to={`/project/${project.link}`}
+                      onClick={() => {
+                        setActive(false);
+                      }}
+                    >
+                      <ProjectList>{project.title}</ProjectList>
+                    </Link>
+                  ))}
+                </ProjectListContainerMobile>
+              )}
+              <LinkContainer>
+                <Link to={`/${tab.link}`}>
+                  <Tabs
+                    key={id}
+                    onMouseEnter={() => {
+                      if (id === 2) {
+                        setActive(true);
+                      }
+                    }}
+                    onMouseLeave={() => {
+                      if (id === 2 && window.innerWidth > 768) {
+                        setActive(false);
+                      }
+                    }}
+                    onClick={() => {
+                      if (id === 2) {
+                        console.log(window.innerWidth);
+                        setActive(!active);
+                      }
+                    }}
+                  >
+                    <TabsText>
+                      {tab.name}{" "}
+                      {tab.project && (
+                        <>
+                          <DropDown />
+                          <ProjectListContainer active={active}>
+                            {projects.map((project) => (
+                              <Link to={`/project/${project.link}`}>
+                                <ProjectList>{project.title}</ProjectList>
+                              </Link>
+                            ))}
+                          </ProjectListContainer>
+                        </>
+                      )}
+                    </TabsText>
+
+                    <TabsIcon src={tab.icon} />
+                  </Tabs>
+                </Link>
+              </LinkContainer>
+            </>
           ))}
         </TabContainer>
       </NavContainer>
