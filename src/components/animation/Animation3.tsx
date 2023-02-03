@@ -73,12 +73,11 @@ const moveAnimation2 = (
 `;
 
 const deliveredAnimation1 = keyframes`
-   0% {content: "🌠Vision"; transition: all ease; transform: rotateX(0deg)}
-   25% {content: "🤝Team"; transition: all ease; transition: all ease; transform: rotateX(360deg)}
-   50% {content: "✨Community"; opacity: 1; transition: all ease; transform: rotateX(0deg);}
+   0% {content: "🤝Team"; transition: all ease; transform: rotateX(0deg)}
+   25% {content: "✨Community"; transition: all ease; transition: all ease; transform: rotateX(360deg)}
+   50% {content: "💕Culture"; opacity: 1; transition: all ease; transform: rotateX(0deg);}
    75% {content: "🚀Product"; opacity: 1; transition: all ease; transform: rotateX(360deg);}
-   100% {content: "🌠Vision"; transition: all ease;
-}
+   100% {content: "🌠Vision"; transition: all ease;}
 `;
 
 const rolesAnimation1 = keyframes`
@@ -255,10 +254,11 @@ const DeliverOverlay = styled.div`
     font-size: var(--font-large);
     color: #7e7e7e;
     margin-bottom: 3rem;
-    content: "🌠Vision";
+    content: "🤝Team";
     transition: all ease;
     transform: rotateX(0deg);
-    animation: ${deliveredAnimation1} 3s cubic-bezier(0.51, -0.24, 0.37, 1.58) 1;
+    animation: ${deliveredAnimation1} 3s cubic-bezier(0.51, -0.24, 0.37, 1.58) 1
+      forwards;
     animation-delay: calc(1.5s + var(--animation-2-delay-length));
   }
 `;

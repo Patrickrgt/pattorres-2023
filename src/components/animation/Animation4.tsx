@@ -84,7 +84,7 @@ const interestsAnimation1 = keyframes`
    40% {content: "#Web3"; opacity: 1; transition: all ease; transform: rotateX(0deg);}
    60% {content: "#AI"; opacity: 1; transition: all ease; transform: rotateX(360deg);}
    80% {content: "#DataAnalytics"; opacity: 1; transition: all ease; transform: rotateX(0deg);}
-   100% {content: "#WebDevelopment"; opacity: 1; transition: all ease; transform: rotateX(360deg);
+   100% {content: "#SoftwareEngineering"; opacity: 1; transition: all ease; transform: rotateX(360deg);
 }
 `;
 
@@ -200,7 +200,8 @@ const InterestsOverlay = styled.div`
     content: "#WebDevelopment";
     transition: all ease;
     transform: rotateX(0deg);
-    animation: ${interestsAnimation1} 3s cubic-bezier(0.51, -0.24, 0.37, 1.58);
+    animation: ${interestsAnimation1} 3s cubic-bezier(0.51, -0.24, 0.37, 1.58)
+      forwards;
     animation-delay: calc(1.5s + var(--animation-3-delay-length));
     opacity: 1;
   }
