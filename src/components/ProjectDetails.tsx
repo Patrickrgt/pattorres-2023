@@ -2,6 +2,18 @@ import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 
+import hexImg from "../assets/img/hexMobile.png";
+import hexFooter from "../assets/img/hex.png";
+
+import starImg from "../assets/img/starImg.png";
+import starFooter from "../assets/img/starStore.png";
+
+import gcImg from "../assets/img/gcImg.png";
+import gcFooter from "../assets/img/gc.png";
+
+import lunarImg from "../assets/img/lunarImg.png";
+import lunarCapitalFooter from "../assets/img/lunarCapitalFooter.png";
+
 import aikoImg from "../assets/img/aiko.png";
 import aikoImg2 from "../assets/img/aiko2.png";
 
@@ -21,6 +33,82 @@ import psycheImg from "../assets/img/psyche.png";
 import web from "../assets/img/web.svg";
 import github from "../assets/img/github.svg";
 import alpha from "../assets/img/alpha.png";
+
+const hex = {
+  name: "HEX TERMINA",
+  color: "#1e77f4",
+  image: hexImg,
+  position: "Full-stack Engineer",
+  web: "https://starodysseystore.com/",
+  description:
+    "Hex Termina is a streetwear brand founded by the artist Vinne.art, who has garnered over 400,000 followers on Instagram. Known for its distinctive style, Vinne.art has collaborated with renowned brands and popular anime series, including Evangelion and Bring Me the Horizon. These collaborations have helped the brand stand out in the competitive fashion industry.",
+  tabs: ["Role", "Team", "Skills"],
+  role: ["💻Full-stack Engineer", "📈Ecommerce Manager"],
+  team: ["🎨Vinne", "🎨Garrid", "🎨Crystal", "🗣️Matarelli", "‍💻Shvrkboy"],
+  skills: ["⚛️Next", "✏️Typecript", "💅Tailwind", "📝Firebase"],
+  problem: null,
+  solution: null,
+  purpose:
+    "Vinne.art, the creator of Hex Termina, reached out to me to develop a custom online store featuring unique product authentication methods. I now play a key role in advancing the brand's technology and also assist in selling products at various conventions across the United States.",
+  footerImage: hexFooter,
+};
+
+const star = {
+  name: "STAR ODYSSEY STORE",
+  color: "#1e77f4",
+  image: starImg,
+  position: "Full-stack Engineer",
+  web: "https://starodysseystore.com/",
+  description:
+    "Star Odyssey Store is the official e-commerce platform for the artist Star Odyssey, who boasts over 30,000 followers on Instagram and has produced music videos with over 1 million views on YouTube. As a 3D artist, Star Odyssey specializes in Y2K aesthetics, and his physical products reflect his unique persona.",
+  tabs: ["Role", "Team", "Skills"],
+  role: ["💻Full-stack Engineer", "📈Ecommerce Manager"],
+  team: ["🎨StarOdyssey", "‍💻Shvrkboy"],
+  skills: ["⚛️Next", "✏️Typecript", "💅Tailwind", "📝Firebase"],
+  problem: null,
+  solution: null,
+  purpose:
+    "I had the opportunity to collaborate with StarOdyssey after he reached out to me to develop a custom Shopify store. He created the wireframes to reflect his brand's unique style, and I built a Shopify store equipped with comprehensive analytics. I continue to enhance his store based on his feedback and the evolving needs of his business.",
+  footerImage: starFooter,
+};
+
+const gc = {
+  name: "LUNAR CAPITAL",
+  color: "#D9D9D9",
+  image: gcImg,
+  position: "Full-stack Engineer",
+  web: "https://www.lunarcapital.xyz/",
+  description:
+    "GC Investments is a sole proprietorship capital firm founded by trader GC. He leads a group of over 100 investors who each pay more than $500 monthly for his investment tips, market news, and opportunities. The firm's portfolio site serves to showcase his current investments to potential clients.",
+  tabs: ["Role", "Team", "Skills"],
+  role: ["💻Full-stack Engineer"],
+  team: ["📈GC", "‍💻Shvrkboy"],
+  skills: ["⚛️Next", "✏️Typecript", "💅Tailwind", "📝Firebase"],
+  problem: null,
+  solution: null,
+  purpose:
+    "I collaborated with GC to develop and enhance his brand identity for GC Investments. I continue to support all his branding needs and have also designed a small database for him. This database allows him to efficiently manage, add new investments, and update descriptions as his business evolves.",
+  footerImage: gcFooter,
+};
+
+const lunar = {
+  name: "LUNAR CAPITAL",
+  color: "#D9D9D9",
+  image: lunarImg,
+  position: "Full-stack Engineer",
+  web: "https://www.lunarcapital.xyz/",
+  description:
+    "Lunar Capital is a web3 and digital asset focused venture studio. Combining a deep fundamental approach with rigorous quantitative analyis illuminates the path to high-potential opportunities, much like the moon illuminates a path in the night sky. Our goal is to uncover hidden gems and guide them towards their full potential.  Just as the gravitational pull of the moon influences tides, our strategies are designed to generate superior risk-adjusted returns, guiding our clients through the ebbs and flows of the digital asset ecosystem.",
+  tabs: ["Role", "Team", "Skills"],
+  role: ["💻Full-stack Engineer"],
+  team: ["📈Kyle", "‍💻Shvrkboy"],
+  skills: ["⚛️Next", "✏️Typecript", "💅Tailwind", "📝Firebase"],
+  problem: null,
+  solution: null,
+  purpose:
+    "I had the opportunity to collaborate with an exceptional investor named Kyle. Together, we developed his brand identity from scratch, exchanging ideas throughout the process. Eventually, I created a small database that allows his team to easily manage and make updates to the website.",
+  footerImage: lunarCapitalFooter,
+};
 
 const aiko = {
   name: "AIKO VIRTUAL",
@@ -552,6 +640,18 @@ const ProjectDetails = () => {
   let { project } = useParams();
   let projectObj: any = {};
   switch (project) {
+    case "hex":
+      projectObj = hex;
+      break;
+    case "star":
+      projectObj = star;
+      break;
+    case "lunar":
+      projectObj = lunar;
+      break;
+    case "gc":
+      projectObj = gc;
+      break;
     case "aiko":
       projectObj = aiko;
       break;

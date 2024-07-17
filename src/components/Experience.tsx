@@ -12,6 +12,8 @@ import {
 import ExperienceServer, { ExperienceType } from "./ExperienceServer";
 
 import shvrkboylogo from "../assets/img/shvrkboylogo.png";
+import shvrklogo from "../assets/img/shvrklogo.png";
+import shvrklogo2 from "../assets/img/shvrklogo2.png";
 import aikologo from "../assets/img/aiko-logo.png";
 import p2plogo from "../assets/img/p2plogo.png";
 
@@ -23,13 +25,32 @@ import yachiyopfp from "../assets/img/yachiyopfp.png";
 export const experience: ExperienceType[] = [
   {
     id: 0,
+    company: "Ecommerce Developer",
+    image: shvrklogo,
+    color: "#98e3ff",
+    position: ["Developer"],
+    description: [
+      {
+        li: 0,
+        title: "Fullstack Developer",
+        date: "02/2023 - Present",
+        color: "#98e3ff",
+        pfp: shvrklogo2,
+        descriptionText:
+          "⦁ Developed custom e-commerce platforms for high-profile artists on Shopify's Hydrogen stack, resulting in a 45% increase in online sales and a 30% growth in revenue. \n \n⦁ Collaborated with high-profile artists and brands, leveraging the artist's social media reach (500,000+ Instagram followers, 1M+ YouTube views) for targeted marketing campaigns; drove a 40% increase in newsletter subscriptions and enhanced audience engagement.\n \n⦁ Pioneered the implementation of headless e-commerce solutions, revolutionizing the user experience and interface; resulted in over $30,000 in revenue and 1.5k+ subscriptions in a single managed store on the first release.",
+      },
+    ],
+    active: false,
+  },
+  {
+    id: 1,
     company: "Aiko Virtual",
     image: aikologo,
     color: "#98e3ff",
     position: ["Developer", "Community Manager"],
     description: [
       {
-        li: 0,
+        li: 1,
         title: "Software Developer",
         date: "08/2022 - Present",
         color: "#98e3ff",
@@ -38,7 +59,7 @@ export const experience: ExperienceType[] = [
           "⦁ Implemented an interactive Discord bot that was used to incentivize user participation and engagement through the use of rewards. \n \n⦁ Developed a web app using React, Styled-Components, and useDApp frameworks that allowed users to view and redeem NFT stamps for prizes in a rewards program. \n \n⦁ Created a set of personality quizzes using JavaScript, which were used to match users with shared interests and facilitate connection-building within the community.",
       },
       {
-        li: 1,
+        li: 2,
         title: "Community Manager",
         date: "04/2022 - Present",
         color: "#ffaa00",
@@ -50,14 +71,14 @@ export const experience: ExperienceType[] = [
     active: false,
   },
   {
-    id: 1,
+    id: 2,
     company: "SHVRK LLC",
     image: shvrkboylogo,
     color: "#357CBB",
     position: ["Developer", "Community Manager"],
     description: [
       {
-        li: 2,
+        li: 3,
         title: "Freelance Reseller",
         date: "08/2018 - 03/2022",
         color: "#357CBB",
@@ -69,14 +90,14 @@ export const experience: ExperienceType[] = [
     active: false,
   },
   {
-    id: 2,
+    id: 3,
     company: "Passion2Progress",
     image: p2plogo,
     color: "#1e7e17",
     position: ["Developer", "Community Manager"],
     description: [
       {
-        li: 3,
+        li: 4,
         title: "Lead Designer",
         date: "09/2017 - 10/2018",
         color: "#1e7e17",

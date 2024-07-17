@@ -11,6 +11,11 @@ import pso2 from "../assets/img/pso2.png";
 import shvrkboy from "../assets/img/shvrkboy.png";
 import psyche from "../assets/img/psyche.png";
 import aiko from "../assets/img/aiko.png";
+import lunar from "../assets/img/lunarcapital.png";
+import gc from "../assets/img/gc.png";
+import starStore from "../assets/img/starStore.png";
+import hex from "../assets/img/hex.png";
+
 
 import alpha from "../assets/img/alpha.svg";
 
@@ -21,6 +26,46 @@ import {
 } from "../state/uiSlice";
 
 export const projects = [
+  {
+    title: "Hex Termina",
+    link: "hex",
+    subtitle: "Ecommerce",
+    image: hex,
+    tech: "Hydrogen, Remix, GraphQL, Typescript, Tailwind",
+    techIcon: reactIcon,
+    primary: "#5577F8",
+    colors: ["#5577F8", "#94B1FE", "#F2F8FF"],
+  },
+  {
+    title: "Star Odyssey Store",
+    link: "star",
+    subtitle: "Ecommerce",
+    image: starStore,
+    tech: "Hydrogen, Remix, GraphQL, Typescript, Tailwind",
+    techIcon: reactIcon,
+    primary: "#1e77f4",
+    colors: ["#f53103", "#1e77f4", "#f5f5f5"],
+  },
+  {
+    title: "GC Investments",
+    link: "gc",
+    subtitle: "Capital Firm",
+    image: gc,
+    tech: "Next, Typescript, Tailwind, Firebase",
+    techIcon: reactIcon,
+    primary: "#000000",
+    colors: ["#000000", "#343131", "#ffffff"],
+  },
+  {
+    title: "Lunar Capital",
+    link: "lunar",
+    subtitle: "Capital Firm",
+    image: lunar,
+    tech: "Next, Typescript, Tailwind, Firebase",
+    techIcon: reactIcon,
+    primary: "#343131",
+    colors: ["#100E0E", "#343131", "#D9D9D9"],
+  },
   {
     title: "Aiko Virtual",
     link: "aiko",
