@@ -36,7 +36,7 @@ import alpha from "../assets/img/alpha.png";
 
 const hex = {
   name: "HEX TERMINA",
-  color: "#1e77f4",
+  color: "#5577F8",
   image: hexImg,
   position: "Full-stack Engineer",
   web: "https://starodysseystore.com/",
@@ -74,7 +74,7 @@ const star = {
 
 const gc = {
   name: "LUNAR CAPITAL",
-  color: "#D9D9D9",
+  color: "#000000",
   image: gcImg,
   position: "Full-stack Engineer",
   web: "https://www.lunarcapital.xyz/",

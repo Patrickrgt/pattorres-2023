@@ -7,8 +7,14 @@ import con2 from "../assets/img/con2.jpg";
 import con3 from "../assets/img/con3.jpg";
 import con4 from "../assets/img/con4.jpg";
 import con5 from "../assets/img/con5.jpg";
+import con6 from "../assets/img/con6.png";
+import con7 from "../assets/img/con7.jpg";
+import con8 from "../assets/img/con8.jpg";
+import con9 from "../assets/img/con9.jpg";
+import con10 from "../assets/img/con10.jpg";
+import con11 from "../assets/img/con11.jpg";
 
-const images = [con1, con2, con3, con4, con5];
+const images = [con1, con2, con3, con4, con5, con6, con7, con8, con9, con10, con11];
 
 const AboutRelativeContainer = styled.div`
   width: 100%;
@@ -216,10 +222,8 @@ const About = () => {
                 I'm Pat, a Full-Stack Developer based in NYC. 🗽
               </Header>
               <Description>
-                I have recently graduated with Bachelor of Science in Computer
-                Science, with a focus on Big Data Management and Analytics, from
-                the New York Institute of Technology. Currently, I am pursuing
-                my Masters of Science in Computer Science.
+                I have recently graduated with Masters of Science in Computer
+                Science from the New York Institute of Technology. Currently, I am a Freelance Full-stack Engineer.
                 <br />
                 <br />
                 My passion lies in building products through collaboration with
@@ -229,12 +233,10 @@ const About = () => {
                 <br />
                 <br />
                 I have had the privilege of working with renowned artists Vinne
-                and Kyo to create the Aiko Virtual NFT collection. Additionally,
+                and Star Odyssey to help build their brand identity. Additionally,
                 I have also gained experience in entrepreneurship through
                 running an LLC focused on the sales of limited edition sneakers
-                and apparel. During my time as a Community Manager at Aiko
-                Virtual, I learned the importance of staying connected and
-                building relationships with other creatives in the NFT space.
+                and apparel. 
                 <br />
                 <br />I possess a broad range of skills in frontend, backend,
                 and database technologies, with a focus on full-stack
