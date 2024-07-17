@@ -39,7 +39,7 @@ const hex = {
   color: "#5577F8",
   image: hexImg,
   position: "Full-stack Engineer",
-  web: "https://starodysseystore.com/",
+  web: "https://hextermina.com/",
   description:
     "Hex Termina is a streetwear brand founded by the artist Vinne.art, who has garnered over 400,000 followers on Instagram. Known for its distinctive style, Vinne.art has collaborated with renowned brands and popular anime series, including Evangelion and Bring Me the Horizon. These collaborations have helped the brand stand out in the competitive fashion industry.",
   tabs: ["Role", "Team", "Skills"],
@@ -77,7 +77,7 @@ const gc = {
   color: "#000000",
   image: gcImg,
   position: "Full-stack Engineer",
-  web: "https://www.lunarcapital.xyz/",
+  web: "https://gc.lol/",
   description:
     "GC Investments is a sole proprietorship capital firm founded by trader GC. He leads a group of over 100 investors who each pay more than $500 monthly for his investment tips, market news, and opportunities. The firm's portfolio site serves to showcase his current investments to potential clients.",
   tabs: ["Role", "Team", "Skills"],
