@@ -14,7 +14,7 @@ import aiko from "../assets/img/aiko.png";
 import lunar from "../assets/img/lunarcapital.png";
 import gc from "../assets/img/gc.png";
 import starStore from "../assets/img/starStore.png";
-import hex from "../assets/img/hex.png";
+import hex from "../assets/img/hexDisplay.png";
 
 
 import alpha from "../assets/img/alpha.svg";
@@ -34,7 +34,7 @@ export const projects = [
     tech: "Hydrogen, Remix, GraphQL, Typescript, Tailwind",
     techIcon: reactIcon,
     primary: "#5577F8",
-    colors: ["#5577F8", "#94B1FE", "#F2F8FF"],
+    colors: ["#F2F8FF", "#5577F8", "#94B1FE"],
   },
   {
     title: "Star Odyssey Store",
@@ -44,7 +44,7 @@ export const projects = [
     tech: "Hydrogen, Remix, GraphQL, Typescript, Tailwind",
     techIcon: reactIcon,
     primary: "#1e77f4",
-    colors: ["#f53103", "#1e77f4", "#f5f5f5"],
+    colors: ["#fdfdfd", "#1e77f4", "#92e6fe"],
   },
   {
     title: "GC Investments",
@@ -54,7 +54,7 @@ export const projects = [
     tech: "Next, Typescript, Tailwind, Firebase",
     techIcon: reactIcon,
     primary: "#000000",
-    colors: ["#000000", "#343131", "#ffffff"],
+    colors: ["#343131", "#ffffff", "#000000"],
   },
   {
     title: "Lunar Capital",
@@ -391,9 +391,9 @@ const Project = () => {
             <ProjectContainer
               color={project.primary}
               onClick={async () => {
-                dispatch(await setGlobalColor("#000000"));
-                dispatch(await setGlobalColor2("#191818"));
-                dispatch(await setGlobalColor3("#2a2727"));
+                dispatch(await setGlobalColor(project.colors[0]));
+                dispatch(await setGlobalColor2(project.colors[1]));
+                dispatch(await setGlobalColor3(project.colors[2]));
               }}
               onMouseEnter={async () => {
                 dispatch(await setGlobalColor(project.colors[0]));

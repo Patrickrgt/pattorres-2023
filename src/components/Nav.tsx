@@ -2,10 +2,17 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { projects } from "./Project";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import projectsIcon from "../assets/img/apps-add.png";
 import resumeIcon from "../assets/img/edit.png";
 import aboutIcon from "../assets/img/user.png";
 import homeIcon from "../assets/img/home.png";
+
+import {
+  setGlobalColor,
+  setGlobalColor2,
+  setGlobalColor3,
+} from "../state/uiSlice";
 
 const tabs = [
   {
@@ -200,6 +207,8 @@ interface NavProps {
 
 const Nav = () => {
   const [active, setActive] = useState(false);
+  const dispatch = useDispatch();
+
   return (
     <Container>
       <NavContainer>
@@ -238,6 +247,10 @@ const Nav = () => {
                       if (id === 2) {
                         console.log(window.innerWidth);
                         setActive(!active);
+                      } else if (id === 0 || 1) {
+                        dispatch(setGlobalColor("#000000"));
+                        dispatch(setGlobalColor2("#191818"));
+                        dispatch(setGlobalColor3("#2a2727"));
                       }
                     }}
                   >
@@ -249,7 +262,19 @@ const Nav = () => {
                           <ProjectListContainer active={active}>
                             {projects.map((project) => (
                               <Link to={`/project/${project.link}`}>
-                                <ProjectList>{project.title}</ProjectList>
+                                <ProjectList
+                                  onClick={() => {
+                                    dispatch(setGlobalColor(project.colors[0]));
+                                    dispatch(
+                                      setGlobalColor2(project.colors[1])
+                                    );
+                                    dispatch(
+                                      setGlobalColor3(project.colors[2])
+                                    );
+                                  }}
+                                >
+                                  {project.title}
+                                </ProjectList>
                               </Link>
                             ))}
                           </ProjectListContainer>

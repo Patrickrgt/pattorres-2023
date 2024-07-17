@@ -7,7 +7,7 @@ import {
   selectPfpTop,
   selectPfpLeft,
 } from "../../state/uiSlice";
-import doodle from "../../assets/img/doodle.jpg";
+import doodle from "../../assets/img/logo192.png";
 import linkedin from "../../assets/img/linkedin-bg.jpg";
 import nyit from "../../assets/img/nyit-icon.jpg";
 
@@ -154,7 +154,7 @@ const ProfilePicOverlay = styled.div<PfpAnimationProps>`
   background-image: url(${doodle});
   background-position: center center;
   background-repeat: no-repeat;
-  background-color: #ffffff;
+  background-color: rgba(0,0,0,0.0);;
   border: 5px solid #1d2226;
   border-radius: 100%;
   position: absolute;

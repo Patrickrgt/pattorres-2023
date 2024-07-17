@@ -73,7 +73,7 @@ const star = {
 };
 
 const gc = {
-  name: "LUNAR CAPITAL",
+  name: "GC INVESTMENTS",
   color: "#000000",
   image: gcImg,
   position: "Full-stack Engineer",

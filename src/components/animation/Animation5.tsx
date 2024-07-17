@@ -118,9 +118,7 @@ const Animation5 = () => {
         <NameCol>
           <Name>Patrick Torres</Name>
           <Description>
-            I enjoy art, web3, collect NFTs, admire fashion design and
-            occasionally attend anime conventions.
-          </Description>
+          I work on creating unique brand identities, developing tech solutions, running e-commerce platforms, and sometimes booth at anime conventions.</Description>
           <LinksRow>
             {links.map((link) => (
               <a href={link.link}>
