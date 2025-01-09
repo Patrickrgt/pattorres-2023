@@ -51,7 +51,7 @@ const dangycam = {
   tabs: ["Role", "Team", "Skills"],
   role: ["💻Full-stack Engineer", "📈Ecommerce Manager"],
   team: ["📷Thomas Dang", "‍💻Shvrkboy/Patrick T."],
-  skills: ["⚛️Next", "✏️Typecript", "💅Tailwind", "📝Firebase"],
+  skills: ["💻Hydrogen", "💻GraphQL", "💅Tailwind", "💻Typescript", "💻Express"],
   problem: null,
   solution: null,
   purpose:
@@ -70,7 +70,7 @@ const montreality = {
   tabs: ["Role", "Team", "Skills"],
   role: ["💻Full-stack Engineer", "📈Ecommerce Manager"],
   team: ["🔮Sina Ghiassi", "‍💻Shvrkboy/Patrick T."],
-  skills: ["⚛️Next", "✏️Typecript", "💅Tailwind", "📝Firebase"],
+  skills: ["💻Hydrogen", "💻GraphQL", "💅Tailwind", "💻Typescript", "💻Express"],
   problem: null,
   solution: null,
   purpose:
@@ -89,7 +89,7 @@ const hex = {
   tabs: ["Role", "Team", "Skills"],
   role: ["💻Full-stack Engineer", "📈Ecommerce Manager"],
   team: ["🎨Vinne", "🎨Garrid", "🎨Crystal", "🗣️Matarelli", "‍💻Shvrkboy/Patrick T."],
-  skills: ["⚛️Next", "✏️Typecript", "💅Tailwind", "📝Firebase"],
+  skills: ["💻Hydrogen", "💻GraphQL", "💅Tailwind", "💻Typescript", "💻Express"],
   problem: null,
   solution: null,
   purpose:
@@ -108,7 +108,7 @@ const star = {
   tabs: ["Role", "Team", "Skills"],
   role: ["💻Full-stack Engineer", "📈Ecommerce Manager"],
   team: ["🎨StarOdyssey", "‍💻Shvrkboy/Patrick T."],
-  skills: ["⚛️Next", "✏️Typecript", "💅Tailwind", "📝Firebase"],
+  skills: ["💻Hydrogen", "💻GraphQL", "💅Tailwind", "💻Typescript", "💻Express"],
   problem: null,
   solution: null,
   purpose:
