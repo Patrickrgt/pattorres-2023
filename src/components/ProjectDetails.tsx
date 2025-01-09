@@ -2,6 +2,12 @@ import styled from "styled-components";
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 
+import dangycamImg from "../assets/img/dangycamImg.png";
+import dangycamFooter from "../assets/img/dangycamFooter.png";
+
+import montrealityImg from "../assets/img/montrealityImg.png";
+import montrealityFooter from "../assets/img/montrealityFooter.png";
+
 import hexImg from "../assets/img/hexMobile.png";
 import hexFooter from "../assets/img/hex.png";
 
@@ -34,6 +40,44 @@ import web from "../assets/img/web.svg";
 import github from "../assets/img/github.svg";
 import alpha from "../assets/img/alpha.png";
 
+const dangycam = {
+  name: "dangycam",
+  color: "#C3E74E",
+  image: dangycamImg,
+  position: "Headless E-commerce Developer",
+  web: "https://dangycam.com/",
+  description:
+    "Dangycam specializes in converting vintage Sony Handycams into modern tapeless devices, blending retro aesthetics with updated functionality. Founded by Thomas Dang, the brand has gained recognition from creators and high-profile figures like Tyrese Haliburton. Its innovative approach and attention to detail make it a favorite among nostalgic videography enthusiasts.",
+  tabs: ["Role", "Team", "Skills"],
+  role: ["💻Full-stack Engineer", "📈Ecommerce Manager"],
+  team: ["📷Thomas Dang", "‍💻Shvrkboy/Patrick T."],
+  skills: ["⚛️Next", "✏️Typecript", "💅Tailwind", "📝Firebase"],
+  problem: null,
+  solution: null,
+  purpose:
+    "To revive and modernize vintage Sony Handycams, blending timeless design with contemporary functionality. Dangycam aims to empower creators by offering tools that celebrate the charm of retro videography while meeting the demands of modern workflows, fostering a unique connection between nostalgia and innovation.",
+  footerImage: dangycamFooter,
+};
+
+const montreality = {
+  name: "MONTREALITY",
+  color: "#F24D70",
+  image: montrealityImg,
+  position: "Headless E-commerce Developer",
+  web: "https://www.montreality.shop/",
+  description:
+    "Montreality is a Canadian interview platform celebrated for its deep, thought-provoking conversations with global cultural icons across music, art, and entertainment. Known for its unique style and meaningful storytelling, Montreality has grown a loyal following across YouTube, TikTok, and Instagram. As they celebrate their 15th anniversary, Montreality has ventured into e-commerce, offering exclusive products that reflect their creative vision and commitment to connecting with fans.",
+  tabs: ["Role", "Team", "Skills"],
+  role: ["💻Full-stack Engineer", "📈Ecommerce Manager"],
+  team: ["🔮Sina Ghiassi", "‍💻Shvrkboy/Patrick T."],
+  skills: ["⚛️Next", "✏️Typecript", "💅Tailwind", "📝Firebase"],
+  problem: null,
+  solution: null,
+  purpose:
+    "When Montreality founder Sina Ghiassi reached out, I collaborated with him to bring their vision for an e-commerce store to life. I designed wireframes, iterated quickly based on his feedback, and launched the store in less than a week. The result was a platform that perfectly aligned with Montreality’s unique brand and marked a milestone in their 15-year journey.",
+  footerImage: montrealityFooter,
+};
+
 const hex = {
   name: "HEX TERMINA",
   color: "#5577F8",
@@ -44,7 +88,7 @@ const hex = {
     "Hex Termina is a streetwear brand founded by the artist Vinne.art, who has garnered over 400,000 followers on Instagram. Known for its distinctive style, Vinne.art has collaborated with renowned brands and popular anime series, including Evangelion and Bring Me the Horizon. These collaborations have helped the brand stand out in the competitive fashion industry.",
   tabs: ["Role", "Team", "Skills"],
   role: ["💻Full-stack Engineer", "📈Ecommerce Manager"],
-  team: ["🎨Vinne", "🎨Garrid", "🎨Crystal", "🗣️Matarelli", "‍💻Shvrkboy"],
+  team: ["🎨Vinne", "🎨Garrid", "🎨Crystal", "🗣️Matarelli", "‍💻Shvrkboy/Patrick T."],
   skills: ["⚛️Next", "✏️Typecript", "💅Tailwind", "📝Firebase"],
   problem: null,
   solution: null,
@@ -63,7 +107,7 @@ const star = {
     "Star Odyssey Store is the official e-commerce platform for the artist Star Odyssey, who boasts over 30,000 followers on Instagram and has produced music videos with over 1 million views on YouTube. As a 3D artist, Star Odyssey specializes in Y2K aesthetics, and his physical products reflect his unique persona.",
   tabs: ["Role", "Team", "Skills"],
   role: ["💻Full-stack Engineer", "📈Ecommerce Manager"],
-  team: ["🎨StarOdyssey", "‍💻Shvrkboy"],
+  team: ["🎨StarOdyssey", "‍💻Shvrkboy/Patrick T."],
   skills: ["⚛️Next", "✏️Typecript", "💅Tailwind", "📝Firebase"],
   problem: null,
   solution: null,
@@ -82,7 +126,7 @@ const gc = {
     "GC Investments is a sole proprietorship capital firm founded by trader GC. He leads a group of over 100 investors who each pay more than $500 monthly for his investment tips, market news, and opportunities. The firm's portfolio site serves to showcase his current investments to potential clients.",
   tabs: ["Role", "Team", "Skills"],
   role: ["💻Full-stack Engineer"],
-  team: ["📈GC", "‍💻Shvrkboy"],
+  team: ["📈GC", "‍💻Shvrkboy/Patrick T."],
   skills: ["⚛️Next", "✏️Typecript", "💅Tailwind", "📝Firebase"],
   problem: null,
   solution: null,
@@ -101,7 +145,7 @@ const lunar = {
     "Lunar Capital is a web3 and digital asset focused venture studio. Combining a deep fundamental approach with rigorous quantitative analyis illuminates the path to high-potential opportunities, much like the moon illuminates a path in the night sky. Our goal is to uncover hidden gems and guide them towards their full potential.  Just as the gravitational pull of the moon influences tides, our strategies are designed to generate superior risk-adjusted returns, guiding our clients through the ebbs and flows of the digital asset ecosystem.",
   tabs: ["Role", "Team", "Skills"],
   role: ["💻Full-stack Engineer"],
-  team: ["📈Kyle", "‍💻Shvrkboy"],
+  team: ["📈Kyle", "‍💻Shvrkboy/Patrick T."],
   skills: ["⚛️Next", "✏️Typecript", "💅Tailwind", "📝Firebase"],
   problem: null,
   solution: null,
@@ -128,7 +172,7 @@ const aiko = {
     "🎨Garrid",
     "🎨Crystal",
     "🗣️Matarelli",
-    "‍💻Shvrkboy",
+    "‍💻Shvrkboy/Patrick T.",
     "‍💻Kiwi",
     "‍💻Chase",
   ],
@@ -640,6 +684,12 @@ const ProjectDetails = () => {
   let { project } = useParams();
   let projectObj: any = {};
   switch (project) {
+    case "dangycam":
+      projectObj = dangycam;
+      break;
+    case "montreality":
+      projectObj = montreality;
+      break;
     case "hex":
       projectObj = hex;
       break;

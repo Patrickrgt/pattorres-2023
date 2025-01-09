@@ -15,6 +15,8 @@ import lunar from "../assets/img/lunarcapital.png";
 import gc from "../assets/img/gc.png";
 import starStore from "../assets/img/starStore.png";
 import hex from "../assets/img/hexDisplay.png";
+import montreality from "../assets/img/montrealityDisplay.png";
+import dangycam from "../assets/img/dangycamDisplay.png";
 
 
 import alpha from "../assets/img/alpha.svg";
@@ -26,6 +28,26 @@ import {
 } from "../state/uiSlice";
 
 export const projects = [
+  {
+    title: "Dangycam",
+    link: "dangycam",
+    subtitle: "Ecommerce",
+    image: dangycam,
+    tech: "Hydrogen, Remix, GraphQL, Typescript, Tailwind",
+    techIcon: reactIcon,
+    primary: "#EE404F",
+    colors: ["#C3E74E", "#EE404F", "#6375CF"],
+  },
+  {
+    title: "Montreality",
+    link: "montreality",
+    subtitle: "Ecommerce",
+    image: montreality,
+    tech: "Hydrogen, Remix, GraphQL, Typescript, Tailwind",
+    techIcon: reactIcon,
+    primary: "#F24D70",
+    colors: ["#FFF9D5", "#FFBEB5", "#F24D70"],
+  },
   {
     title: "Hex Termina",
     link: "hex",
